@@ -70,7 +70,7 @@ function PicView(props){
         <MyTimer back={back} forward={forward}   picTime={props.picTime}   updateTimerState = {updateTimerState}/>
         {StateOfIndexes.currentIndex <= StateOfIndexes.activeIndexes.length   ?
         <>
-        <p>{StateOfIndexes.currentIndex+1}/{StateOfIndexes.activeIndexes.length}</p>
+        <p  className="z-10 text-lg"  style={{position: "absolute",top: "0px", left: "0px", backgroundColor: "black", color:"Silver"}}>{StateOfIndexes.currentIndex+1}/{StateOfIndexes.activeIndexes.length}</p>
         <img style={{position: "absolute", maxHeight:"100vh", margin: "0",
             position: "absolute",
             top: "50%",

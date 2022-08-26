@@ -107,14 +107,16 @@ export default function Timer(props){
       <button id="playBtn" onClick={play} className="z-10 text-lg"  style={{display:"none",position: "absolute",top: "30px", right: "0px", color:"Silver"}}>▶️</button>
       
       <button id="backBtn" onClick={()=>{
+        clearTimeout(tickingTimer);
         setCounter(props.picTime);
-        pause();
+       
         props.back()}} className="z-10 text-2xl"  style={{position: "absolute",top: "50%", left: "0px", color:"Silver"}}>⬅</button>
       
       
       <button id="forwardBtn" onClick={()=>{
+      clearTimeout(tickingTimer);
       setCounter(props.picTime);
-      pause();
+      
       props.forward()}} className="z-10 text-2xl"  style={{position: "absolute",top: "50%", right: "0px",  color:"Silver"}}>➡</button>
       
 
